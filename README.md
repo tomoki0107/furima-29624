@@ -23,6 +23,7 @@
 | Column       | Type       | Options                      | 
 | ------------ | ---------- | ---------------------------- | 
 | content      | string     | null:false                   | 
+| info         | text       | null:false                   |
 | category_id  | integer    | null:false                   | 
 | condition_id | integer    | null:false                   | 
 | burden_id    | integer    | null:false                   | 
