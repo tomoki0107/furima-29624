@@ -44,7 +44,7 @@
 | item   | references | null:false, foreign_key:true |
 
 - belongs_to :user
-- has_one :item
+- belongs_to :item
 - has_one :delivery
 
 ### Association
@@ -63,4 +63,4 @@
 
 ### Association
 
-- has_one :purchase
+- belongs_to :purchase
