@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
-  get 'tops/index'
-  root to: "tops#index"
+  devise_for :users
+  get 'items/index'
+  root to: "items#index"
 end
