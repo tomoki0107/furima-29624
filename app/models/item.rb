@@ -1,4 +1,5 @@
 class Item < ApplicationRecord
+  belongs_to :user
   has_one_attached :image
 
   extend ActiveHash::Associations::ActiveRecordExtensions
@@ -10,12 +11,12 @@ class Item < ApplicationRecord
     validates :info
   end
 
-  with_options numericality: { other_than: 1 } do
-    validates :category
-    validates :condition
-    validates :burden
-    validates :area
-    validates :day
+  with_options presence: true, numericality: { other_than: 1 } do
+    validates :category_id
+    validates :condition_id
+    validates :burden_id
+    validates :area_id
+    validates :day_id
   end
 
   validates :price, 
