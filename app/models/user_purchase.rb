@@ -1,8 +1,9 @@
 class UserPurchase
   include ActiveModel::Model
-  attr_accessor :user_id, :item_id, :purchase_id, :postal_code, :prefecture_id, :municipality, :address, :building, :phone_number
+  attr_accessor :token, :user_id, :item_id, :purchase_id, :postal_code, :prefecture_id, :municipality, :address, :building, :phone_number
 
   with_options presence: true do
+    validates :token
     validates :postal_code, format: {with: /\A[0-9]{3}-[0-9]{4}\z/, message: "Input correctly"}
     validates :prefecture_id, numericality: { other_than: 0, message: "Select" }
     validates :municipality
