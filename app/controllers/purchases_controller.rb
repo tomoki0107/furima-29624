@@ -1,5 +1,5 @@
 class PurchasesController < ApplicationController
-  before_action :set_item, only: [:create]
+  before_action :set_item, only: [:index, :create]
 
   def index
     @user_purchase = UserPurchase.new
